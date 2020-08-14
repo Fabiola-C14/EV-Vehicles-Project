@@ -41,10 +41,10 @@ The purpose of this project is to map out all the available electric vehicle cha
 ### Map 2
 
 ### Radial Stacked Bar Chart (D3)
-
+The graph shows number of charging stations per state in different ranks
 
 <img src="https://i.pinimg.com/originals/18/8c/a7/188ca7f03d2282765b57fb602f1a7235.jpg"
      alt="kangaroos"
-     style="float: left" width='150' height='200'/>
+     style="float: left" width='140' height='200'/>
 
 
