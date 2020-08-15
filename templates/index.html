@@ -1,3 +1,7 @@
+{%extends "base.html" %}
+{% block title %}Electric Vehicles{% endblock %}
+{%block Content %}
+{% endblock %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,41 +15,7 @@
 </head>
 
 <body>
- <!-- Navigation -->
- <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #71e92b;">
-    <div class="container">
-      <a class="navbar-brand text-white" href="#">Electric Vehicles</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Navbar -->
-
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link text-white" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">EV Locator</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Stats</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Programs</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-<!-- Heading Row -->
-<div class="container">
-<div class="row align-items-center my-3">
-    <div class="col-6 mt-5">
-      <img class="img-fluid rounded mb-6 mb-lg-6" src="images/ev_charging.jpg" alt="">
-    </div>
+ 
     <!-- /.col-lg-5 -->
     <div class="col-6 mt-5">
       <h1 class="font-weight-light" style="text-align:center">Zero Emissions!</h1>
@@ -66,7 +36,7 @@
   <div class="card" style="width: 20rem;">
     <img src="images/stats.png" class="card-img-top" alt="...">
     <div class="card-body">
-      <p class="card-text">Click on the Location tab to find an EV station near you!</p>
+      <p class="card-text">Click on the Stats link in the navigation bar to view the total number of State incentives and programs throughout the US.</p>
    
     </div>
   </div>
@@ -76,7 +46,7 @@
   <div class="card" style="width: 20rem;">
     <img src="images/station6.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <p class="card-text">Click on the Stats tab to learn more about??</p>
+      <p class="card-text"></p>Click on the Location link in the navigation bar to find and EV station near you!</p>
     </div>
   </div>
   </div>
@@ -84,7 +54,7 @@
   <div class="card" style="width: 20rem;">
     <img src="images/incentives.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <p class="card-text">Click the Programs link to learn more about EV incentives.</p>
+      <p class="card-text">Click on the Programs link on the navigation bar to learn about the incentives in your State that will benefit you.</p>
     </div>
   </div>
 </div>
