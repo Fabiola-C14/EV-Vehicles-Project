@@ -1,13 +1,17 @@
 {%extends "base.html" %}
-{% block title %}Electric Vehicles{% endblock %}
+{% block title %}Radial Graph{% endblock %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+	{%block head%}
+	{{ super()}}
 	<meta charset="utf-8">
 	<script src="https://d3js.org/d3.v4.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="styleBar.css">
-	<script src="app.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='radial_bar/styleBar.css') }}">
+	<script src="{{ url_for('static', filename='radial_bar/app.js') }}"></script>
+	{%endblock%}
+
 </head>
 
 <body>
@@ -34,7 +38,7 @@
 	var z = d3.scaleOrdinal()
 		.range(["black", "#E2062B", "#FF8C00", "#FFE135", "#67B347", "#006CDC", "#6F2DA7"]);
 
-	d3.csv("station_state.csv", function(d, i, columns) {
+	d3.csv("{{url_for('static', filename='radial_bar/station_state.csv')}}", function(d, i, columns) {
 		for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
 		d.total = t;
 		return d;
