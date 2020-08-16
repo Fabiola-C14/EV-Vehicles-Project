@@ -1,6 +1,3 @@
-// Perform a GET request to the query URL
-// d3.json("refinedData.json", function(data) {
-
 // Creating our initial map object
 // We set the longitude, latitude, and the starting zoom level
 // This gets inserted into the div with an id of 'map'
@@ -62,15 +59,6 @@ function highlightFeature(e) {
 function zoomToFeature(e) {
         myMap.fitBounds(e.target.getBounds());
 }
-      
-// var popup = L.popup();
-
-// function onMapClick(e) {
-//         popup
-//         .setLatLng(e.latlng)
-//         .setContent("You clicked the map at " + e.latlng.toString())
-//         .openOn(myMap);
-// }
 
 
 
@@ -78,7 +66,6 @@ function onEachFeature(feature, layer) {
         layer.on({
                 mouseover: highlightFeature,
                 mouseout: resetHighlight,
-                // click: zoomToFeature
         });
 }
       
@@ -119,7 +106,7 @@ var legend = L.control({position: 'bottomright'});
 
 legend.onAdd = function (myMap) {
 
-    var div = L.DomUtil.create('div', 'info legend'),
+    var div = L.DomUtil.create('div', 'info2 legend'),
         grades = [0, 1, 2, 3, 4, 5, 6],
         labels = [];
 
@@ -133,7 +120,6 @@ legend.onAdd = function (myMap) {
     return div;
 };
 
-legend.addTo(myMap);
+legend.addTo(myMap);;
 
-// });
 

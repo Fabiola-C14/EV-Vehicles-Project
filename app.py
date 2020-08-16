@@ -25,9 +25,9 @@ app= Flask(__name__, static_url_path='/static')
 def home():
     return render_template("index.html")
 
-# @app.route("/locations")
-# def location():
-#     return render_template("####")
+@app.route("/locations")
+def location():
+    return render_template("marker.html")
 
 @app.route("/stats")
 def Stats():
