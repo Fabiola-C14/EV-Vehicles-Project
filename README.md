@@ -37,7 +37,7 @@ The purpose of this project is to map out all the available electric vehicle cha
 
 ## Visualization:
 ### Map 1
-
+This map represents 29,777 Electric Vehicle charging stations that was available from openchargemap api. The Leaflet library used was marker cluster group library, which helps map out every locations without causing memory issue.
 ### Map 2
 
 ### Radial Stacked Bar Chart (D3)
