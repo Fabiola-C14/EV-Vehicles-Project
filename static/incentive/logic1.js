@@ -79,7 +79,7 @@ geojson = L.geoJson(statesData, {
         onEachFeature: onEachFeature
 }).bindPopup(function (layer){
         return layer.feature.properties.Incentive_Description;
-},{maxHeight: 100},).addTo(myMap);
+},{maxHeight: 200},).addTo(myMap);
 
 
       
