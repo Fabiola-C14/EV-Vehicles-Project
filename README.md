@@ -8,7 +8,7 @@
 
 ## Objective:
 
-The purpose of this project is to map out all the available electric vehicle charging stations in the United States and provide users with ample amount of information on each of the stations.The plan is to create a html/ JavaScript based webpage that can be deployed on the web, allowing users to interactively play around the map and find useful data on each of the stations. We also provide useful statistics on EV charging stations related to their geographical locations, government subsidies for each states, and other general information that may be relevant to the users if they decide to purchase EV cars.
+The purpose of this project is to create a website with a map displaying all the available electric vehicle charging stations in the United States and provide users with ample amount of information on each of the stations. In addition, the website displays electric vehicle incentives and programs at the national and state level. The maps created using html/JavaScrips allow users to interactively play around with the map and find useful data on each of the stations or state. We also provide useful statistics information on EV charging stations related to their geographical locations, government subsidies for each states, and other general information that may be relevant to the users if they decide to purchase EV cars.
 
 
 ## Libraries / Requirements:
