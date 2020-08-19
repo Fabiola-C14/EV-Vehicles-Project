@@ -133,4 +133,5 @@ dmypy.json
 config.py
 *config.py
 *Config.py
+*config.js
 

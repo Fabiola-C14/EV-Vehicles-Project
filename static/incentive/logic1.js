@@ -2,7 +2,7 @@
 // We set the longitude, latitude, and the starting zoom level
 // This gets inserted into the div with an id of 'map'
 var myMap = L.map('map').setView([37.8, -96], 4);
-console.log(myMap)
+
 // Adding a tile layer (the background map image) to our map
 // We use the addTo method to add objects to our map
 L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
@@ -15,6 +15,7 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(myMap);
 
 
+// Add style to the information display
 function style(feature) {
 return {
         fillColor: getColor(feature.properties.Total_Type_Count),
@@ -26,6 +27,7 @@ return {
 };
 }
 
+// Color function for state by the number of incentives
 function getColor(d) {
         return d > 6 ? '#800026' :
                d > 5 ? '#BD0026' :
@@ -38,7 +40,8 @@ function getColor(d) {
 
       
 var geojson;
-      
+
+// Create a functionto highlight the state when hovered
 function highlightFeature(e) {
         var layer = e.target;
       
@@ -55,13 +58,8 @@ function highlightFeature(e) {
       
         info.update(layer.feature.properties);
 }
-      
-function zoomToFeature(e) {
-        myMap.fitBounds(e.target.getBounds());
-}
 
-
-
+// Add functionality of hover
 function onEachFeature(feature, layer) {
         layer.on({
                 mouseover: highlightFeature,
@@ -69,12 +67,13 @@ function onEachFeature(feature, layer) {
         });
 }
       
+// Add function to reset the page when hovered out
 function resetHighlight(e) {
         geojson.resetStyle(e.target);
         info.update();
 }
       
-      
+// Add layers of states on the map      
 geojson = L.geoJson(statesData, {
         style: style,
         onEachFeature: onEachFeature
@@ -84,9 +83,10 @@ geojson = L.geoJson(statesData, {
 
 
       
-      
+// Add information display      
 var info = L.control();
       
+// Create a class for the information display on html
 info.onAdd = function (myMap) {
         this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
         this.update();
@@ -104,13 +104,14 @@ info.addTo(myMap);
 
 var legend = L.control({position: 'bottomright'});
 
+// Add legend on the tap
 legend.onAdd = function (myMap) {
 
     var div = L.DomUtil.create('div', 'info2 legend'),
         grades = [0, 1, 2, 3, 4, 5, 6],
         labels = [];
 
-    // loop through our density intervals and generate a label with a colored square for each interval
+    // loop through our incentive numbers intervals and generate a label with a colored square for each interval
     for (var i = 0; i < grades.length; i++) {
         div.innerHTML +=
             '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
