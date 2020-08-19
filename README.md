@@ -38,10 +38,13 @@ The purpose of this project is to map out all the available electric vehicle cha
 ## Visualization:
 ### Map 1
 This map represents 29,777 Electric Vehicle charging stations that was available from openchargemap api. The Leaflet library used was marker cluster group library, which helps map out every locations without causing memory issue.
-### Map 2
 
 ### Radial Stacked Bar Chart (D3)
 The graph shows number of charging stations per state in different ranks
+
+### Incentive Programs
+The map shows the number of incentives by the states in the United States.
+It is interactive to show the number for each type of incentive and its description as cursor is used on the map. Also, it is color coded to compare the difference among the states.
 
 <img src="https://i.pinimg.com/originals/18/8c/a7/188ca7f03d2282765b57fb602f1a7235.jpg"
      alt="kangaroos"
